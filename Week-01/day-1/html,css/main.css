@@ -1,0 +1,34 @@
+
+h1{font-family: 'Courier New', Courier, monospace;
+    color:#ff0099;   
+}
+.text {padding: 10%;
+    font-family: consolas;
+}
+.linkek {position: absolute;
+    top:20px;
+    right: 10%;
+    box-align: center;
+    word-spacing: 10px;
+}
+a {
+    color:#ff0099;   
+}
+
+.kep {image-orientation: left;
+ }
+.navibar {
+    margin-right:0%; 
+    background-color: #333333;
+    height: 50px;
+}
+body {
+    margin: 0px;
+    background-image:url(topography.png);   
+    background-repeat: repeat;}
+
+.pont {text-align: center;
+font-size: 40px}
+
+.tech {text-align: center;
+font-size: 30px}

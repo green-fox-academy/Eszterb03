@@ -6,9 +6,9 @@
 // Surface Area: 600 (a* b+ a*c+ b*c)*2 
 // Volume: 1000 (abc)
 // a téglatest három él
-let myHeightcuboid : number = 4
-let myLenghtcuboid : number = 5
-let myWidthcuboid : number = 6
+let myHeightcuboid : number = 20.2
+let myLenghtcuboid : number = 35.2
+let myWidthcuboid : number = 40.2
 
 console.log((myHeightcuboid*myLenghtcuboid+myHeightcuboid*myWidthcuboid+myLenghtcuboid*myWidthcuboid)*2)
 console.log (myHeightcuboid*myLenghtcuboid*myWidthcuboid)

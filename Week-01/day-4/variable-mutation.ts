@@ -22,9 +22,12 @@ let e: number = 8;
 // what's the cube of e's value?
 console.log (Math.pow(e,3))
 
+console.log ( e*2)
+
 let f1: number = 123;
 let f2: number = 345;
 let bigger: boolean=true
+
 if(f2>f1){bigger=true} else{bigger=false}
 console.log(bigger);
 

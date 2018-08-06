@@ -12,14 +12,20 @@
 // %%%%%
 
 let lineCount: number = 6;
-let percentSign: string = '%'
-let spaceCount: string = ' '
+let percentSign: string = '%';
+let spaceCount: string = '';
+let place: string = ' ';
 
 
-for (let j = 0; j <= lineCount; j++) {
-    if (j == 1 || j == lineCount)
-    console.log(percentSign + '%%%%%');
-for (let k=j; k <= lineCount-1 ;k++)
-    console.log(percentSign+spaceCount);
-if else console.log(percentSign + '    '+ '%');
+for (let i: number = 1; i <= lineCount; i++) {
+        for (let j: number = 1; j <= lineCount; j++)
+        /* {
+                if (i == 1 || i == lineCount || j == 1 || j == lineCount || i == j) {
+                    spaceCount += percentSign;
+                } else {
+                    spaceCount += place;
+                }
+        } */
+        console.log(spaceCount);
+        spaceCount = '';
 }

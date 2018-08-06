@@ -18,13 +18,8 @@ let spaceCount: string = ' '
 
 for (let j = 0; j <= lineCount; j++) {
     if (j == 1 || j == lineCount)
-        console.log(Array(lineCount).join(percentSign));
-    if (j == 2)
-        console.log(Array(lineCount - 4).join(percentSign) + spaceCount + percentSign)
-    if (j == 3)
-        console.log(percentSign + spaceCount + percentSign + spaceCount + percentSign)
-    if (j == 4)
-        console.log(percentSign + spaceCount + spaceCount + percentSign + percentSign)
-    if (j == 5)
-        console.log(percentSign + spaceCount + spaceCount + spaceCount + percentSign)
+    console.log(percentSign + '%%%%%');
+for (let k=j; k <= lineCount-1 ;k++)
+    console.log(percentSign+spaceCount);
+if else console.log(percentSign + '    '+ '%');
 }

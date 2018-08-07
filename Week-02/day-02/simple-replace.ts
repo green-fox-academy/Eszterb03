@@ -9,6 +9,6 @@ console.log(example);
 
 export = example;
 
-let newExample= example.replace("dishwasher","galaxy");
+let newExample = example.replace("dishwasher", "galaxy");
 
 console.log(newExample);

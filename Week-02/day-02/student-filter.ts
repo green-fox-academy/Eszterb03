@@ -8,7 +8,7 @@ const students: any[] = [
     { name: 'Sean', age: 10, candies: 1 }
 ];
 console.log(students[0]["name"]);
-console.log(students[0].name); 
+console.log(students[0].name);
 
 // create a function that takes a list of students and logs:
 // - Who has got more candies than 4 candies
@@ -26,3 +26,12 @@ function Names(NameOfStudent: any) {
     )
 }
 Names(students)
+
+function CandiesAv( StundentAv: any) {
+    let candieNumber: number = 0;
+    StundentAv.forEach(elem => {
+        candieNumber += elem.candies
+    });
+    console.log(candieNumber/ StundentAv.length);
+}
+CandiesAv(students)

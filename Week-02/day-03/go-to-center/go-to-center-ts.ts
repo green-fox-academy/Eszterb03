@@ -15,7 +15,6 @@ ctx.lineTo(canvas.width/2,canvas.height/2);
 ctx.lineWidth = 1;
 ctx.stroke(); */
 
-
 let generatedone: number;
 let generatedtwo: number;
 let startingpoint: number[] = []

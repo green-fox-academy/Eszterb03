@@ -14,11 +14,6 @@ const students: any[] = [
 // create a function that takes a list of students and logs:
 // - Sum of the age of people who have lass than 5 candies
 
-/*function sumAge (sumage: any){
-  let map = sumage.map( five => five.candies <5 );
-  console.log(map) */
-
-
 function candieSUM(candies: any) {
   let candieNumber: number = 0;
   candies.forEach(element => {

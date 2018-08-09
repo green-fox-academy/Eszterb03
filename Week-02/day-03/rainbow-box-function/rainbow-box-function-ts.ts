@@ -9,16 +9,18 @@ const ctx = canvas.getContext('2d');
 // and draws a square of that size and color to the center of the canvas.
 // Create a loop that fills the canvas with rainbow colored squares.
 
-let squareFill = ["red", "purple", "yellow", "pink", "blue"]
+let squareFill = ["red", "purple", "yellow", "pink", "blue"];
 // kell egy a" és kell egy space változó
+let distance = 20;
+let a = canvas.height;
 
 
-function drawRain(squaresize, color) {
+function drawRain(squaresize: number, color: string,) {
     ctx.fillStyle = color;
     ctx.fillRect((canvas.width / 2) - (squaresize / 2), (canvas.height / 2) - (squaresize / 2), squaresize, squaresize);
 }
-for (let i: number = 0; i < 20; i++) {
-    let colorVar = i % squareFill.length
-    let size =  - 30 
+for (let i: number = a; i >= distance; i = i-distance) {
+// van egy csökkenő loop, és el kell osztani "i"-t a distanceval, ahhoz hogy végig menjen a színeken 
+    let colorVar =squareFill[i/distance % squareFill.length];
+    drawRain(i,colorVar);
 };
-}

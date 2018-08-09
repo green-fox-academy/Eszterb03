@@ -19,13 +19,13 @@ let place: string = ' ';
 
 for (let i: number = 1; i <= lineCount; i++) {
         for (let j: number = 1; j <= lineCount; j++)
-        /* {
+         {
                 if (i == 1 || i == lineCount || j == 1 || j == lineCount || i == j) {
                     spaceCount += percentSign;
                 } else {
                     spaceCount += place;
                 }
-        } */
+        } 
         console.log(spaceCount);
         spaceCount = '';
 }

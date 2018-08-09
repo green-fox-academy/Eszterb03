@@ -16,9 +16,8 @@ function drawSquare(VarinX, VarinY) {
     ctx.fillStyle = color;
     ctx.fillRect(VarinX, VarinY, 50, 50);
 };
-let newSquareX: number = Math.ceil(Math.random() * 400);
-let newSquareY: number = Math.ceil(Math.random() * 400);
-
-for (let i: number; i < 3; i++) {
+for (let i: number =0; i < 3; i++) {
+    let newSquareX: number = Math.ceil(Math.random() * 400);
+    let newSquareY: number = Math.ceil(Math.random() * 400);
     drawSquare(newSquareX, newSquareY)
 }

@@ -14,10 +14,10 @@
 // he told me that he wasn’t really into the whole organizer profile thing.
 
 class BlogPost {
-    authorName: string;
-    title: string;
-    text: string;
-    publicationDate: string;
+   private authorName: string;
+   private title: string;
+   private text: string;
+   private publicationDate: string;
     constructor (authorName: string, title: string, text: string, publicationDate: string, ) {
         this.authorName = authorName;
         this.title = title;
@@ -25,6 +25,7 @@ class BlogPost {
         this.publicationDate = publicationDate;
     }
 }
+
 
 // "Lorem Ipsum" titled by John Doe posted at "2000.05.04."
 let BlogPost1: BlogPost = new BlogPost('John Doe', 'Lorem Ipsum', 'Lorem ipsum dolor sit amet.','2000.05.04');

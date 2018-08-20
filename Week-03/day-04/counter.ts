@@ -9,3 +9,5 @@ function counter(n: number): void {
     }
 }
 counter(9)
+
+

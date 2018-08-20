@@ -14,12 +14,12 @@ function addNumbers(n: number): number {
     if (n == 1) {
         return 1;
     } else {
-        return + addNumbers(n - 1);
+        return addNumbers(n - 1);
     }
 
 
 }
-addNumbers(5)
+
 
 //drawing 
 // let size: number = canvas.width;

@@ -12,9 +12,9 @@
 
 function digitSum(n: number): number {
     if (n > 10) {
-        let newN:number = Math.floor((n/10));
-        return (n % 10) + digitSum(newN); 
-        
+        let newN: number = Math.floor((n / 10));
+        return (n % 10) + digitSum(newN);
+
     } else {
         return n;
     }

@@ -1,12 +1,16 @@
 import { StringedInstrument } from "./stringedInst";
 
 
-class bassGuitar extends StringedInstrument{
+export class BassGuitar extends StringedInstrument{
 
-  constructor(name: string, numberOfString : number){
-    super(name,numberOfString);
+  constructor(numberOfString : number =6){
+    super('Bassguitar',numberOfString);
   }
-  sound(){
-    console.log ('Duum-duum-duum')
+
+  sound():string {
+    return 'Duum-duum-duum'
+  }
+  play(){
+    console.log(`${this.name}, a ${this.numberOfStrings}-stringed instrument that goes ${this.sound()}`)
   }
 }

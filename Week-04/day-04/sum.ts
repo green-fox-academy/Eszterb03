@@ -6,23 +6,15 @@
 // create a list of integers
 // use the t.equal to test the result of the created sum method
 // Run it
-// Create different tests where you
-// test your method with an empyt list
-// with a list with one element in it
-// with multiple elements in it
-// with a null
-// with a string
-// Run them
-// Fix your code if needed
 
 
-class ListInteger {
+export class ListInteger {
   private intArray: number[] = [];
 
-  constructor(intArray: number[]=[1,2,3]) {
+  constructor(intArray: any[]=[1,2,3]) {
     this.intArray = intArray
   }
-  sum(): number {
+  sum(): any {
     let intArrayValue = 0;
     for (let i: number = 0; i < this.intArray.length; i++) {
       intArrayValue += this.intArray[i]
@@ -31,6 +23,6 @@ class ListInteger {
   }
 }
 
-let mytest: ListInteger = new ListInteger()
+let mytest: ListInteger = new ListInteger([2,4])
 
 console.log(mytest.sum())

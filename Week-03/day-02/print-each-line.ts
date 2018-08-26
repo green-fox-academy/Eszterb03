@@ -11,7 +11,7 @@ const charEndcoding = 'utf-8'
 const fs = require('fs');
 
 
-function readFromfile(fileName: string) :void {
+function readFromfile(fileName: string)  {
     // ha ez a file létezik, nyissa meg az if függvény az egy try
     try {
        if (fs.existsSync(fileName, charEndcoding)){
@@ -19,7 +19,7 @@ function readFromfile(fileName: string) :void {
             console.log(result.split('\r\n'))
         }
     else {
-            throw new TypeError('Unable to read file: my-file.txt');
+            throw new Error('Unable to read file: my-file.txt');
         }
     }
     catch (e) {

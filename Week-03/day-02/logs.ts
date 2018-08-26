@@ -19,8 +19,11 @@ function readFromFile(fileName: string): string {
         return null;
     }
 }
+
+
 function logmessage(fileTxt:any){
-        const contentFile :any[] = readFromFile(fileTxt).split('\r\n');
-    // } catch(error) {}
+        const contentFile :string = readFromFile(fileTxt);
+     let ipAddress =  contentFile.match(/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/g)
+       return ipAddress.filter(function(item, index, filteredIp){ return filteredIp.indexOf(item) === index; });
 }
-logmessage('log.txt')
+console.log(logmessage('log.txt'))

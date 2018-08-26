@@ -21,9 +21,17 @@ function readFromFile(fileName: string): string {
 }
 
 
-function logmessage(fileTxt:any){
-        const contentFile :string = readFromFile(fileTxt);
-     let ipAddress =  contentFile.match(/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/g)
-       return ipAddress.filter(function(item, index, filteredIp){ return filteredIp.indexOf(item) === index; });
+function logmessage(fileTxt: string): string[] {
+    const contentFile: string = readFromFile(fileTxt);
+    let ipAddress = contentFile.match(/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/g)
+    return ipAddress.filter(function (item, index, filteredIp) { return filteredIp.indexOf(item) === index; });
 }
 console.log(logmessage('log.txt'))
+
+function getRatio(fileTxt: string): number {
+    const contentFile: string = readFromFile(fileTxt);
+    let numberofPost = contentFile.match(/POST/g).length;
+    let numberOfGet = contentFile.match(/GET/g).length;
+    return numberOfGet / numberofPost;
+}
+console.log(getRatio('log.txt'))

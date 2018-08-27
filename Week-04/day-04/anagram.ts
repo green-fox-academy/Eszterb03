@@ -15,3 +15,4 @@ export function checkAnagramm(anagramWord1, anagramWord2): boolean {
 }
 
 console.log(checkAnagramm(anagramm1, anagramm2))
+

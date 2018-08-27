@@ -11,7 +11,19 @@ class Farm {
     private animals: Animal[];
     private numSlots: number;
 
-    constructor(){
+    constructor(animals: Animal[], numSlots:number){
+        animals = this.animals;
+        numSlots = this.numSlots
+    }
+    breed(){
+        if(this.numSlots !== 0){
+            let newAnimal
+            this.animals.push(newAnimal)
+        }
+        this.numSlots++
+    }
+    
+    slaughter(){
 
     }
 }

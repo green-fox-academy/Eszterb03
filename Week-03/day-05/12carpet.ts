@@ -4,33 +4,35 @@
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-let sizeSquare: number = 200;
 
 ctx.fillStyle = 'yellow';
-ctx.fillRect(0, 0, 600, 600);
+ctx.fillRect(1, 1, 600, 600);
 
-let x: number = 200
-let y: number = 0
+// let xCor: number = 200
+// let yCor: number = 0
+// let sizeSquare: number = 200;
 
-function drawingCarpet(i: number) {
-  if()
-  ctx.strokeStyle = 'black';
-  ctx.strokeRect(x, y, sizeSquare, sizeSquare);
-  ctx.strokeStyle = 'black';
-  ctx.strokeRect(x + i, y + i, sizeSquare, sizeSquare)
-  ctx.strokeStyle = 'black';
-  ctx.strokeRect(x - i, y + i, sizeSquare, sizeSquare)
-  ctx.strokeStyle = 'black';
-  ctx.strokeRect(x, y + i * 2, sizeSquare, sizeSquare)
+
+function drawSquares(xCor: number, yCor: number, size: number, loop: number) {
+  if (loop > 0) {
+      ctx.strokeRect(xCor + size, yCor, size, size);
+      ctx.strokeRect(xCor, yCor + size, size, size);
+      ctx.strokeRect(xCor + 2 * size, yCor + size, size, size);
+      ctx.strokeRect(xCor + size, yCor + 2 * size, size, size);
+
+  size /= 3;
+  drawSquares(xCor + 3 * size, yCor, size, loop -1);
+  drawSquares(xCor, yCor + 3 * size, size, loop -1);
+  drawSquares(xCor + 6 * size, yCor + 3 * size, size, loop -1);
+  drawSquares(xCor + 3 * size, yCor + 6 * size, size, loop -1);
+
+
+
+  } else {
+
+  }
 }
+drawSquares(0, 0, canvas.height/3, 5);
 
-for (let i: number = 200; i >= 0; i--) {
-  drawingCarpet(i)
-
-}
-
-
-
-// ctx.strokeRect(200, 200, sizeSquare, sizeSquare);
 
 

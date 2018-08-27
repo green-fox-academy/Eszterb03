@@ -11,10 +11,10 @@
 export class ListInteger {
   private intArray: number[] = [];
 
-  constructor(intArray: any[]=[1,2,3]) {
+  constructor(intArray:number[]=[1,2,3]) {
     this.intArray = intArray
   }
-  sum(): any {
+  sum(): number {
     let intArrayValue = 0;
     for (let i: number = 0; i < this.intArray.length; i++) {
       intArrayValue += this.intArray[i]

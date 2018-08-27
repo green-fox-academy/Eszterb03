@@ -12,6 +12,5 @@ return inputQuote
 }
 console.log(quoteSwap(words).join(' '));
 
-
 // Expected output: "What I cannot create I do not understand."
 export = quoteSwap;

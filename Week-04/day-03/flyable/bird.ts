@@ -4,7 +4,8 @@ import { Flyable } from "./flyable";
 
 class Bird extends Animal implements Flyable{
   land(): void {
-    console.log("Leszállok.")  }  
+    console.log("Leszállok."); 
+  }  
   fly(): void {
     throw new Error("Szállok.");
   }

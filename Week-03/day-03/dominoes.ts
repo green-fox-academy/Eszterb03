@@ -1,5 +1,7 @@
 import { Domino } from "./domino";
 
+
+
 function initializeDominoes(): Domino[] {
     let dominoes = [];
     dominoes.push(new Domino(5, 2));

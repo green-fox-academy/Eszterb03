@@ -45,9 +45,9 @@ console.log(getNameandBalance2(11234543))
 //	{ clientName: 'Vladimir', accountNumber: 43546731, balance: 5204099571.23 },
 //	{ clientName: 'Sergei', accountNumber: 23456311, balance: 1354100.0 }
 //]
-export = {
-    getNameAndBalance,
-    transferAmount,
-    accounts
-  };
+// export = {
+//     getNameAndBalance,
+//     transferAmount,
+//     accounts
+//   };
    

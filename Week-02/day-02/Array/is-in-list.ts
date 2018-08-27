@@ -22,5 +22,5 @@ function checkNums(listofnum: any[]) {
     // ) { return element }
 
 };
-
+c
 console.log(checkNums(listOfNumbers))

@@ -11,7 +11,7 @@ test('not shoul be equal with zero', test => {
 
 
 test('is it the right avarage number?', test => {
-  let testArray = [1, 4]
-  test.equal(getTrickyAvg(testArray), 2.5)
+  let testArray = [1, 4,-1];
+  test.equal(getTrickyAvg(testArray), 1.5)
   test.end()
 })

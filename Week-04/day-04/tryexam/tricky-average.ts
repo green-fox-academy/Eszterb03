@@ -16,10 +16,10 @@
 
 let testNumberArry = [3, 4, 5, 6];
 let testNumberArry2 = [1, 2, 3];
-let testNumberArry3 = [1, 4];
+let testNumberArry3 = [1, 4, -1];
 
 
-function getTrickyAvg(numberOfAvg: number[] = []):number {
+const getTrickyAvg = (numberOfAvg: number[]): number => {
   let smallestOddNum = numberOfAvg[0];
   let largestEvenNum = numberOfAvg[0];
 
@@ -33,7 +33,10 @@ function getTrickyAvg(numberOfAvg: number[] = []):number {
       smallestOddNum = numberOfAvg[i];
     }
   }
-  return((smallestOddNum + largestEvenNum) / 2);
+  if (smallestOddNum == null && largestEvenNum == null) {
+    throw new Error('There is no number');
+  }
+  return ((smallestOddNum + largestEvenNum) / 2);
 }
 
 console.log(getTrickyAvg(testNumberArry));

@@ -15,10 +15,10 @@ function longestWord(fileName) {
   let fileSplit = fileContent.split('\r\n').join('');
   let fileSplitted = fileSplit.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, '').split(' ');
   let longestWord: number = fileSplitted.sort(function (a, b) { return b.length - a.length })[0].length;
-  let longestWordsArray:string[] =[];
+  let longestWordsArray: string[] = [];
   fileSplitted.forEach(element => {
-    if(element.length == longestWord){
-  longestWordsArray.push(element)
+    if (element.length == longestWord) {
+      longestWordsArray.push(element)
     }
   }); return longestWordsArray
 }
@@ -34,7 +34,14 @@ function avarageWord(fileName) {
   for (let i: number = 0; i < fileSplit.length; i++) {
     avarageNum += fileSplit[i].length
   }
-return avarageNum/fileSplit.length
+  return avarageNum / fileSplit.length
 }
 
 console.log(avarageWord('poem.txt'))
+
+
+function fourLongWord(fileName) {
+  let fileContent: string = readFromFile(fileName);
+
+  
+}

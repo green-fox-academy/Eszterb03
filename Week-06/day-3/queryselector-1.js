@@ -20,3 +20,15 @@ console.log('king', king);
 let businessLamp = document.getElementsByClassName('asteroid big');
 console.log('businessLamp', businessLamp);
 
+let theconceitedMan = document.getElementsByClassName('asteroid b326')
+
+let container = document.getElementsByClassName('container')
+let conceitedKing = container[0].querySelectorAll('section.container > div')
+console.log(conceitedKing);
+alert(conceitedKing[0].textContent);
+alert(conceitedKing[1].textContent);
+
+
+let noBusiness = document.querySelectorAll("div")
+// console.log(noBusiness[0], noBusiness[1], noBusiness[2]);
+console.log(noBusiness)

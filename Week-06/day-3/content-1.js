@@ -3,17 +3,14 @@
 //   fill every paragraph with the last one's content.
 //   fill every paragraph with the last one's content keeping the cat strong.
 // </script>
-// OR
-// <script src="content-1.js"></script> -->
 
-let apple = document.getElementsByClassName("apple");
-console.log(apple.textContent);
-let appleBallon = document.getElementsByClassName("apple");
-console.log(appleBallon.textContent);
-let catBallon = document.getElementsByClassName("balloon");
-console.log(catBallon.textContent);
-let animalsCat = document.getElementsByClassName("cat");
-console.log(animalsCat.textContent);
-let animals = document.getElementsByClassName("animals");
 
-console.log(animals.innerHTML);
+let animals = document.querySelectorAll('p');
+for (let i = 0; i < animals.length; i++) {
+  animals[i].textContent = animals[animals.length - 1].textContent;
+};
+
+let animals = document.querySelectorAll('p');
+for (let i = 0; i < animals.length; i++) {
+  animals[i].innerHTML = animals[animals.length - 1].innerHTML;
+};

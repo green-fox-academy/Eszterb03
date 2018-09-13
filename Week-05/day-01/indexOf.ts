@@ -8,5 +8,6 @@ export default function indexOf(numberOfArray, number: number): number {
       return index;
     }
   }
-return 0;
+  return 0;
 };
+

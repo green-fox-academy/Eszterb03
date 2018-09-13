@@ -10,15 +10,17 @@ export class Garden {
 
   wateringAll(amountOfWater: number) {
     console.log(`Watering with ${amountOfWater}`)
-    let isThirsty = this.plants.filter(plant => plant.needsWater())
+    let isThirsty = this.plants.filter(plant => plant.needsWater());
     isThirsty.forEach(plant => {
-      plant.watering(amountOfWater/isThirsty.length)      
+      plant.watering(amountOfWater / isThirsty.length);
     });
   }
-  getStatus(){
-    this.plants.forEach(plant=>
-      console.log(`${plant.getColor()}  ${plant.constructor['name']} ${plant.getStatus()}`) 
-    )};
+
+  getStatus() {
+    this.plants.forEach(plant =>
+      console.log(`${plant.getColor()}  ${plant.constructor['name']} ${plant.getStatus()}`)
+    )
+  };
 }
 
 let flower1: Flower = new Flower('sárga');

@@ -30,45 +30,45 @@ function findMostProductiveYear(studioName: string) {
   } else {
     let movies = fs.readFileSync(`${studioName}.csv`, 'utf-8');
     let movieYears = movies.match(/[0-9]{4}/g);
-    let mostProdYear: string = "";
-    let countNumber: number = 0;
-    let maxNumberOfYear: number = 1
+    
+  //   let countNumber: number = 0;
+  //   let maxNumberOfYear: number = 1
 
-    for (let index: number = 0; index < movieYears.length; index++) {
-      for (let j: number = index; j < movieYears.length; j++) {
+  //   for (let index: number = 0; index < movieYears.length; index++) {
+  //     for (let j: number = index; j < movieYears.length; j++) {
 
-        if (movieYears[index] === movieYears[j]) {
-          countNumber += 1;
+  //       if (movieYears[index] === movieYears[j]) {
+  //         countNumber += 1;
+  //       }
+  //       if (countNumber > maxNumberOfYear) {
+  //         countNumber = maxNumberOfYear;
+  //         mostProdYear = movieYears[index]
+  //       }
+  //     } countNumber = 0
+  //   }
+  //   return mostProdYear
+  // }
+
+      let yearCounter: object = {}
+      for (let i: number = 0; i < movieYears.length; i++) {
+        if (yearCounter[movieYears[i]] === undefined) {
+          yearCounter[movieYears[i]] = 1
+        } else {
+          yearCounter[movieYears[i]]++
         }
-        if (countNumber > maxNumberOfYear) {
-          countNumber = maxNumberOfYear;
-          mostProdYear = movieYears[index]
+      }
+      let mostProdYear: object = [0, 0]
+      for (const key in yearCounter) {
+        if (yearCounter.hasOwnProperty(key)) {
+          let currentCount = yearCounter[key];
+          console.log(currentCount)
+          if (mostProdYear[1] < currentCount) {
+            mostProdYear = [key, currentCount];
+          }
         }
-      } countNumber = 0
+      }
+      return mostProdYear[0]
     }
-    return mostProdYear
-  }
-
-    //   let yearCounter: object = {}
-    //   for (let i: number = 0; i < movieYears.length; i++) {
-    //     if (yearCounter[movieYears[i]] === undefined) {
-    //       yearCounter[movieYears[i]] = 1
-    //     } else {
-    //       yearCounter[movieYears[i]]++
-    //     }
-    //   }
-    //   let mostProdYear: object = [0, 0]
-    //   for (const key in yearCounter) {
-    //     if (yearCounter.hasOwnProperty(key)) {
-    //       let currentCount = yearCounter[key];
-    //       console.log(currentCount)
-    //       if (mostProdYear[1] < currentCount) {
-    //         mostProdYear = [key, currentCount];
-    //       }
-    //     }
-    //   }
-    //   return mostProdYear[0]
-    // }
   }
 
   console.log(findMostProductiveYear('marvel'))

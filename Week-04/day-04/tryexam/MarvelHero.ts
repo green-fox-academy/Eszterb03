@@ -1,6 +1,5 @@
 import { Hero } from "./Hero";
 import Punchable from "./punchable";
-import { DCHero } from "./DCHero";
 
 'use strict'
 
@@ -10,11 +9,9 @@ export class MarvelHero extends Hero {
     super(name, motivation);
   }
 
-  punch(punchThisHero: Punchable) {
-    if (punchThisHero instanceof MarvelHero) {
-      console.log('Hi my hero buddy');
-    } else {
-      return this.punch(punchThisHero);
+  public punch(hero: Punchable): void {
+    if (!(hero instanceof MarvelHero) && this.getMotivationLevel() >= 1) {
+      hero.bePunched(this.motivation / 1.5);
     }
   }
 }

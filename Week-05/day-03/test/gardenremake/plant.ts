@@ -12,6 +12,7 @@ export abstract class Plant {
     this.currentWater = 0;
     this.minWater = minWater;
   }
+  
   watering(amountOfWater) {
     this.currentWater += amountOfWater / this.absorbWater;
   };

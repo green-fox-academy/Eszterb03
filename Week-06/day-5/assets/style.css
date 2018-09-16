@@ -1,0 +1,82 @@
+body {
+  background-color: gainsboro;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mainbox {
+  display: flex;
+  position: relative;
+  width: 817px;
+  height: 350px;
+}
+
+.imgcarousel {
+  overflow: hidden;
+}
+
+.imgcontainer{
+  white-space: nowrap;
+  font-size: 0;
+  
+}
+
+.img {
+  height: 350px;
+}
+
+.imgholder {
+  position: relative;
+  padding: 0px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.description {
+  font-size: initial;
+  background: rgba(0, 0, 0, 0.247);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 25%;
+  min-width: 160px;
+  min-height: 22px;
+} 
+
+.description h2,p {
+  color: white;
+}
+
+.button2 img {
+  transform: rotate(180deg);
+}
+
+button 
+{
+  background-color: white;
+  cursor: pointer;
+  height: 350px;
+  width: 40px;
+  border: 0.5px;
+}
+
+/* .thumbnail{
+  display:inline-block;
+} */
+
+.thumbnail img{
+  margin-top: 20px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.thumbnail

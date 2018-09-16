@@ -1,0 +1,50 @@
+body {
+  height: 94vh;
+  width: auto;
+  background-color: gainsboro;
+}
+
+h1 {
+  text-align: center;
+}
+
+.mainbox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  flex-basis: auto;
+}
+
+.picture {
+  height: 43%;
+  width: 80%;
+  min-width: 160px;
+  min-height: 90px;
+}
+
+.footer {
+  background: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  bottom: 0px;
+  height: 115px;
+  width: 80%;
+}
+
+.header {
+  margin-left: 5px;
+  font-size: 20px;
+  color: black; 
+  line-height: 70%;
+}
+
+.text {
+  margin-left: 5px;
+  color: black; 
+  margin-bottom: 3px;
+}
+
+.buttonright {
+  transform: rotate(180deg);
+}

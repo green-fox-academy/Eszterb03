@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
+
 const path = require('path');
 app.use('/assets', express.static('assets'));
 
@@ -53,12 +56,40 @@ app.get('/appenda/:word', (req, res) => {
   }
 });
 
-app.post('/dountil/:action', (req, res) => {
+app.post('/dountil/:action', jsonParser, (req, res) => {
   if (req.params.action === 'sum') {
-
+    res.json({
+      result: sumOfNum(req.body.until)
+    });
+  } else if (req.params.action === 'factor') {
+    res.json({
+      result: factOfNum(req.body.until)
+    });
+  } else {
+    res.status(404).json({
+      error: `Please provide a number!`,
+    });
   }
 });
 
 app.listen(PORT, () => {
   console.log(`the server is u an running port ${PORT}`)
 });
+
+
+function sumOfNum(numUntilSum) {
+  if (numUntilSum > 0) {
+    return numUntilSum += sumOfNum(numUntilSum - 1);
+  } else {
+    return 0;
+  }
+}
+
+function factOfNum(numUntilFact) {
+  if (numUntilFact === 1) {
+    return 1;
+  } else {
+    return numUntilFact * (factOfNum(numUntilFact - 1))
+  }
+}
+

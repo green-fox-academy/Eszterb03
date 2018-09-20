@@ -28,5 +28,10 @@ console.log(mapWith([1, 2, 3], addOne));
 
 const words = ['map', 'reduce', 'filter'];
 
+const removeSecondLetter = (word) => {
+  let sliced = word.slice(0, 1) + word.slice(2, word.length)
+  return sliced
+}
+
 console.log(mapWith(words, removeSecondLetter));
 // expected result: ['mp','rdc', 'fle']

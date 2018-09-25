@@ -53,25 +53,35 @@
     //    - one for zooming
 
     const nav = document.querySelector('nav');
-    const zoom = document.querySelector('zoom')
+    const img = document.querySelector('.img-inspector')
+
+    let positionX = 0;
+    let positionY = 0;
+    let backgroundsize = 200;
 
     nav.addEventListener('click', (event) => {
-      if (event.target.dataset.move === 'up') {
-
-      } else if (event.target.dataset.move === 'down') {
-
-      } else if (event.target.dataset.move === 'left') {
-
-      } else if (event.target.dataset.move === 'right') {
-
+      if (event.target.dataset.direction === 'up') {
+        positionY -= 10;
+        img.style.backgroundPositionY = `${positionY}px`;
+      } else if (event.target.dataset.direction === 'down') {
+        positionY += 10;
+        img.style.backgroundPositionY = `${positionY}px`;
+      } else if (event.target.dataset.direction === 'left') {
+        positionX -= 10;
+        img.style.backgroundPositionX = `${positionX}px`;
+      } else if (event.target.dataset.direction === 'right') {
+        positionX += 10;
+        img.style.backgroundPositionX = `${positionX}px`;
       }
     });
 
-    zoom.addEventListener('click', (event) => {
-      if (event.target.dataset.zoom === 'up') {
-
-      } else if (event.target.dataset.zoom === 'down') {
-
+    nav.addEventListener('click', (event) => {
+      if (event.target.dataset.direction === 'in') {
+        backgroundsize += 20;
+        img.style.zoom = `${backgroundsize}%`
+      } else if (event.target.dataset.direction === 'out') {
+        backgroundsize -= 20;
+        img.style.zoom = `${backgroundsize}%`
       }
     });
 

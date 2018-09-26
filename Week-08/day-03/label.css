@@ -1,1 +1,111 @@
-.
+body {
+  background: #313841;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  }
+
+button {
+  background: #1C242B;
+  color: whitesmoke;
+  width: 80px;
+  height: 80px;
+  border: none;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* after-az elem utan rak valamit */
+
+button:hover:after {
+  left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-left-color: #1C242B;
+	border-width: 20px;
+	margin-top: -20px;
+}
+
+#delete-container{
+  display: flex;
+}
+
+#confirm-container {
+  display: flex;
+}
+
+#delete {
+    display: none;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: red;
+    color:white;
+    height: 80px;
+    width: 300px;
+}
+
+
+#confirm {
+    display: none;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: green;
+    color:white;
+    height: 80px;
+    width: 300px;
+}
+
+.far {
+  font-size: 150%;
+}
+
+button[data-action="deleting"]:hover {
+  color:red;
+
+}
+
+button[data-action="deleting"]:hover + #delete {
+  display: block;
+}
+
+button[data-action="confirm"]:hover + #confirm {
+  display: block;
+}
+
+button[data-action="confirm"]:hover {
+  color:green;
+}
+
+
+
+
+.fas {
+  font-size: 150%;
+}
+
+/* .fas:hover {
+  color:green;
+} */

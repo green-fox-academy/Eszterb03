@@ -1,5 +1,5 @@
 body {
-  background: #2F3060;
+  background: #2f3060;
   height: 100vh;
 }
 
@@ -17,6 +17,10 @@ body {
   color: blanchedalmond;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .container {
 display: flex;
 justify-content: center;
@@ -25,13 +29,19 @@ height: 100%;
 }
 
 .green {
+  border-radius:8px;
+  box-shadow: inset 0 -3px rgba(0,0,0,0.3);
   background: #1AA855;
 }
 
 .red {
+border-radius:8px;
 background: red;
+box-shadow: inset 0 -3px rgba(0,0,0,0.3);
 }
 
 .light {
+  border-radius:8px;
   background: #01ACED;
+  box-shadow: inset 0 -3px rgba(0,0,0,0.3);
 }

@@ -1,0 +1,26 @@
+body {
+  background: #2F3060;
+}
+
+.button {
+  width: 120px;
+  height: 50px;
+  font-family:Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 0px;
+  color: rgb(36, 41, 46);
+}
+
+
+.green {
+  background: #1AA855;
+}
+
+.red {
+background: red;
+}
+
+.light {
+  background: #01ACED;
+}

@@ -12,19 +12,19 @@
 <body>
   <form id="formHandler">
     <div class="pet_question">
-      <label>What is your favourite pet?</label>
+      <legend>What is your favourite pet?</legend>
       <br />
-      Dog
       <input type="radio" id="dog" name="pet" value="dog">
-      Cat
+      <label for="cat">Dog</label>
       <input type="radio" id="cat" name="pet" value="cat">
-      Viktor the goldfish
+      <label for="cat">Cat</label>
       <input type="radio" id="fish" name="pet" value="fish">
+      <label for="cat">Viktor the goldfish</label>
     </div>
     <br />
     <br />
     <div class="cat_facts">
-      <label>Do you want to sign up for cat facts?</label>
+      <legend>Do you want to sign up for cat facts?</legend>
       <br />
       Yes
       <input type="radio" id="yes" name="cat" value="yes">
@@ -33,7 +33,7 @@
     </div>
     <br />
     <br />
-    <button id="cat" type="submit">I love cats </button>
+    <button id="catbutton" type="submit">I love cats </button>
     <button id="signup" type="submit">Sign up</button>
   </form>
 </body>

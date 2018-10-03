@@ -90,20 +90,20 @@ app.post('/questions', (req, res) => {
           }
           console.log(result)
           res.redirect('/');
-        })
-      })
+        });
+      });
     })
   }
 })
 
-app.delete('/question/:id', (req, res) => {
+app.delete('/questions/:id', (req, res) => {
   let id = req.params.id;
   if (id) {
-    conn.query(`DELETE FROM posts WHERE posts.id = ${id}`, (err, posts) => {
+    conn.query(`DELETE FROM questions WHERE id = ${id}`, (err, posts) => {
       if (err) {
-        res.status(500).json({
-          err: err.message,
-        });
+        console.log(err.toString());
+        res.status(500).send('Database error');
+        return;
       };
       res.status(404).json({
         err: "This post doesn't exist",

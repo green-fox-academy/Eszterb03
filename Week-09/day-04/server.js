@@ -5,8 +5,9 @@ const path = require('path');
 const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
-
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -59,9 +60,9 @@ app.get('/questions', (req, res) => {
   conn.query(`SELECT * FROM questions;`, (err, quiz) => {
     if (err) {
       console.log(err.toString());
-      re.status(500).send('Database error');
+      res.status(500).send('Database error');
       return;
-    } res.status(400).json({
+    } res.status(200).json({
       quiz
     })
   })

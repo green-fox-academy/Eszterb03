@@ -67,7 +67,54 @@ app.get('/questions', (req, res) => {
   })
 });
 
+app.post('/questions', (req, res) => {
+  if (req.body.question) {
+    conn.query('INSERT INTO questions(question) VALUES(?);', [req.body.question], (err, quiz) => {
+      if (err) {
+        console.log(err.toString());
+        res.status(500).send('Database error');
+        return;
+      }
+      const idAnswer = quiz.insertId
+      console.log(idAnswer)
+      conn.query(`INSERT INTO answers(question_id, answer, is_correct) VALUES(${idAnswer},'${req.body.answer1}', 0),(${idAnswer},'${req.body.answer2}', 0),(${idAnswer},'${req.body.answer3}', 0),(${idAnswer},'${req.body.answer4}', 0);`, (err, quiz) => {
+        if (err) {
+          console.log(err.toString());
+          res.status(500).send('Database error');
+          return;
+        } conn.query(`SELECT * FROM answers WHERE question_id = ${idAnswer};`, (err, result) => {
+          if (err) {
+            console.log(err.toString());
+            res.status(500).send('Database error');
+            return;
+          }
+          console.log(result)
+          res.redirect('/');
+        })
+      })
+    })
+  }
+})
 
+app.delete('/question/:id', (req, res) => {
+  let id = req.params.id;
+  if (id) {
+    conn.query(`DELETE FROM posts WHERE posts.id = ${id}`, (err, posts) => {
+      if (err) {
+        res.status(500).json({
+          err: err.message,
+        });
+      };
+      res.status(404).json({
+        err: "This post doesn't exist",
+      });
+    });
+  } else {
+    res.json({
+      err: "Please provide an ID",
+    });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`App is up and running on port ${PORT}`);

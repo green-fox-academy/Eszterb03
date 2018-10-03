@@ -27,8 +27,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'))
 });
 
+let multiplyNumber = 10
+
 app.get('/game', (req, res) => {
-  let randomNumber = Math.floor(Math.random() * 10)
+  let randomNumber = Math.ceil(Math.random() * multiplyNumber)
   conn.query(`SELECT * FROM answers JOIN questions
   ON questions.id = answers.question_id
   Where question_id=${randomNumber};`, (err, quiz) => {
@@ -41,7 +43,6 @@ app.get('/game', (req, res) => {
         quiz.forEach(element => {
           quizElement.push(element)
         });
-        console.log(quiz)
 
         res.status(200).json({
           question: quiz[0].question,
